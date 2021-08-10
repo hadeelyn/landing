@@ -118,17 +118,14 @@ a{
   }
 
  /* header*/
-header{
-    position:absolute;
-    width: 100%;
-    z-index: 10;
-}
+ 
 
 .topnav {
-    overflow: hidden;
-    
+  width: 80%;
+  
+  margin: auto;/*elment in the center*/
   }
-    
+  
  .topnav .active {
      color: var(--mainColor);
  
@@ -142,8 +139,12 @@ header{
     text-decoration: none;
     font-size: 17px;
   }
-
-  
+.navbar{
+  position: absolute;
+}
+  .navbar-toggler{
+    display: none;
+  }
 .topnav a:hover {
     background-color: var(--mainColor);
     color: white;
@@ -159,8 +160,9 @@ header{
   }
   
  .topnav .navbar-text{
-float: right;
+ margin-left: 30%;
 color: #fff;
+  font: 1em sans-serif;
  }
  
 /*Home section*/
@@ -180,6 +182,7 @@ float: left;
      float: right;
      width: 30%;
      margin-top: 7%;
+      
  }
 
  .title{
@@ -192,7 +195,7 @@ float: left;
         color: #fff;
         line-height: 1.5;
         font-size: 20px;
-        margin-bottom: 20%;
+        
     } 
     button{
          width: 200px;
@@ -209,7 +212,9 @@ float: left;
            background: inherit;
            border: solid #fff;
        }
-
+       button:hover{
+         background: rgb(158, 152, 152);
+       }
        
 /*About section*/
 
@@ -228,9 +233,8 @@ float: left;
     float: right;
 }
   .feature-img{
-      
-    margin-left: 60px;
-
+      width: 60%;
+   margin-left: 20%;
  }
 
  
@@ -312,7 +316,7 @@ background-color:  #fff;
     background: #fff;
     text-align: center;
     border-radius: 5%;
-    height: 200px;
+    height: 40%;
     width: 65%;
     margin-left: 15%;
  
@@ -425,13 +429,13 @@ textarea {
 
 
  
-@media  (max-width: 768px){
+@media  (max-width: 740px){
   
    
   .home-content{
         float: none;
         width: 100%;
-      margin-top: -20%;
+      
       text-align: center;
     }
       .feature img{
@@ -441,10 +445,18 @@ textarea {
      margin-top: 80%;
      
       }
-  
-    .home-content-img{
-        visibility: hidden;
+      .navbar-toggler{
+           display: block;
+      
+          background: #fff;
+          width: 20%;
+         
+      }
+    .topnav a{
+      display: none;
     }
+    .home-content-img{
+visibility: hidden;  }
     .home-content img{
         width: 20%;
     }
@@ -452,13 +464,7 @@ textarea {
         font-size: 10px;
        
     }
-    nav{
-        margin-left: 65%;
- 
-    }
-     nav li{
-         background: #FF3000;
-     }
+    
      .about-fl{
         display: flex;
         flex-direction: column;
@@ -486,8 +492,8 @@ textarea {
        width: 20%;
    }
    .send{
-    width: 40%;
- 
+    width: 30%;
+ font-size: 10px;
    }
    .row{
     display: grid;
@@ -507,6 +513,7 @@ textarea {
     float: right;
     display: block;
   }
+  
 }
  
   .topnav.responsive {position: relative;}
